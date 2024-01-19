@@ -58,7 +58,8 @@ function App() {
   };
 
   useEffect(() => {
-    if (window.location.href === "https://metamask.app.link/dapp/tech4stack.netlify.app/") {
+    // if (window.location.href === "https://metamask.app.link/dapp/tech4stack.netlify.app/") {
+    if (window.location.href === "ethereum:0xA2892102b1a91bF5FBE4426175AfDE831B06778E") {
       setMobileLinkText("Connected");
     }
   }, []);
@@ -84,10 +85,12 @@ function App() {
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
-                    <i className="fab fa-github me-1"></i>
                     <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
-                      Github Link
+                    <i className="fab fa-github me-1"></i>
                     </a>
+                    <a href="mailto:am7620613@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ashish-maurya-65a9122a7?trk=contact-info" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="/images/Ashish.pdf" target="_blank" ><i class="fa-solid fa-file"></i></a>
                   </div>
                 </div>
               </div>
@@ -98,9 +101,8 @@ function App() {
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
-                    <i className="fab fa-github me-1"></i>
                     <a href="https://github.com/divy-arun-mav" target="_blank" rel="noopener noreferrer">
-                      Github Link
+                    <i className="fab fa-github me-1"></i>
                     </a>
                   </div>
                 </div>
@@ -112,9 +114,8 @@ function App() {
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
-                    <i className="fab fa-github me-1"></i>
                     <a href="https://github.com/Star-Viper" target="_blank" rel="noopener noreferrer">
-                      Github Link
+                    <i className="fab fa-github me-1"></i>
                     </a>
                   </div>
                 </div>
@@ -126,9 +127,8 @@ function App() {
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
-                    <i className="fab fa-github me-1"></i>
                     <a href="https://github.com/Kj1710" target="_blank" rel="noopener noreferrer">
-                      Github Link
+                    <i className="fab fa-github me-1"></i>
                     </a>
                   </div>
                 </div>
@@ -167,6 +167,14 @@ function App() {
         .navbar-brand {
           margin-inline: auto;
         }
+      }
+      a{
+        text-decoration: none;
+        
+      }
+      i{
+        margin: 0 10px;
+        font-size: 20px
       }
 
       `}</style>
