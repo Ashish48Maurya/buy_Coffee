@@ -94,12 +94,12 @@ function App() {
               <div className="d-flex m-2">
                 <div className="first d-flex">
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                  <span className="ms-2 my-auto">Divy Mav</span>
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
                     <i className="fab fa-github me-1"></i>
-                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/divy-arun-mav" target="_blank" rel="noopener noreferrer">
                       Github Link
                     </a>
                   </div>
@@ -108,12 +108,12 @@ function App() {
               <div className="d-flex m-2">
                 <div className="first d-flex">
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                  <span className="ms-2 my-auto">Vipul Mhatre</span>
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
                     <i className="fab fa-github me-1"></i>
-                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Star-Viper" target="_blank" rel="noopener noreferrer">
                       Github Link
                     </a>
                   </div>
@@ -122,12 +122,12 @@ function App() {
               <div className="d-flex m-2">
                 <div className="first d-flex">
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                  <span className="ms-2 my-auto">Kaushal Jha</span>
                 </div>
                 <div className="second ms-auto my-auto">
                   <div>
                     <i className="fab fa-github me-1"></i>
-                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Kj1710" target="_blank" rel="noopener noreferrer">
                       Github Link
                     </a>
                   </div>
