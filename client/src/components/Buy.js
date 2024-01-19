@@ -8,25 +8,33 @@ const Buy = ({ state }) => {
   const [name, setName] = useState("");
   const [amt, setAmt] = useState("");
   const [msg, setMsg] = useState("");
+
   const buyChai = async (event) => {
     event.preventDefault();
-    try{
+    try {
       const { contract } = state;
       const amount = { value: ethers.utils.parseEther(amt) };
+
       const transaction = await contract.buyChai(name, msg, amount);
+
       setLoading(true);
+
       await transaction.wait();
+
       setName("");
       setAmt("");
       setMsg("");
+
+      notifyA("Thank you For Donating Us");
+    } catch (err) {
+      notifyA("err");
+    } finally {
       setLoading(false);
-      notifyA("Thankyou For Donating Us")
-    }
-    catch(err){
-      notifyA("Transaction Rejected By You")
     }
   };
+
   return (
+
     <>
       {loading === true ? <> <div className="text-center">
         <div className="text-center">

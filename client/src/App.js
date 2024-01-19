@@ -58,8 +58,7 @@ function App() {
   };
 
   useEffect(() => {
-    // if (window.location.href === "https://metamask.app.link/dapp/tech4stack.netlify.app/") {
-    if (window.location.href === "ethereum:0xA2892102b1a91bF5FBE4426175AfDE831B06778E") {
+    if (window.location.href === "https://metamask.app.link/dapp/tech4stack.netlify.app/") {
       setMobileLinkText("Connected");
     }
   }, []);
@@ -174,7 +173,8 @@ function App() {
       }
       i{
         margin: 0 10px;
-        font-size: 20px
+        font-size: 30px;
+        color: orangered
       }
 
       `}</style>
