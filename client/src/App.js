@@ -1,12 +1,12 @@
 import abi from "./contract/chai.json";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
 import Memos from "./components/Memos";
+import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom";
 import { toast } from 'react-toastify';
 import "./App.css";
-
 function App() {
   const notifyA = (msg) => toast.error(msg);
   const [state, setState] = useState({
@@ -17,6 +17,10 @@ function App() {
   const [mobileLinkText, setMobileLinkText] = useState("Mobile?")
   const [account, setAccount] = useState();
   const isAndroid = /android/i.test(navigator.userAgent);
+  const ref = useRef(null);
+  const open = () => {
+    ref.current.click();
+  }
 
   const connectWallet = async (e) => {
     e.preventDefault();
@@ -61,9 +65,85 @@ function App() {
 
   return (
     <>
+      <button ref={ref} type="button" className="btn btn-primary" style={{ "display": "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+
+      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" style={{ "color": "orangered" }} id="exampleModalLabel">Developers</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <div className="d-flex m-2">
+                <div className="first d-flex">
+                  <Avatar alt="Remy Sharp" src="/images/Ashish.jpeg" />
+                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                </div>
+                <div className="second ms-auto my-auto">
+                  <div>
+                    <i className="fab fa-github me-1"></i>
+                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                      Github Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex m-2">
+                <div className="first d-flex">
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                </div>
+                <div className="second ms-auto my-auto">
+                  <div>
+                    <i className="fab fa-github me-1"></i>
+                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                      Github Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex m-2">
+                <div className="first d-flex">
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                </div>
+                <div className="second ms-auto my-auto">
+                  <div>
+                    <i className="fab fa-github me-1"></i>
+                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                      Github Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex m-2">
+                <div className="first d-flex">
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                  <span className="ms-2 my-auto">Ashish Maurya</span>
+                </div>
+                <div className="second ms-auto my-auto">
+                  <div>
+                    <i className="fab fa-github me-1"></i>
+                    <a href="https://github.com/Ashish48Maurya" target="_blank" rel="noopener noreferrer">
+                      Github Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
       <nav className="navbar navbar-expand-lg bg-body-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" ><span className="text-danger">Tech</span><span>4</span><span className="text-success">Stack</span></Link>
+          <Link className="navbar-brand" onClick={open} ><span className="text-danger">Tech</span><span>4</span><span className="text-success">Stack</span></Link>
 
           <div type="button" className="buttons">
             <form className="d-flex ms-auto" role="search">
